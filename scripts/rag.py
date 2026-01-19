@@ -21,7 +21,15 @@ if parent_dir not in sys.path:
     sys.path.insert(0, parent_dir)
 from scripts.llm_call import *
 
-sys.path.insert(0, "/../ai2-scholarqa-lib-main/api")
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+relative_path = os.path.join(
+    BASE_DIR,
+    "..",  # adjust number of ".." depending on where this file lives
+    "ai2-scholarqa-lib-main",
+    "api"
+)
+
+sys.path.insert(0, os.path.abspath(relative_path))
 
 from scholarqa import ScholarQA
 from scholarqa.rag.retrieval import PaperFinder, PaperFinderWithReranker
