@@ -35,5 +35,5 @@ python3 app.py
 ## 📋 Requirements
 
 - Semantic Scholar API Key
-- LLM API Key for any openai or gemini
+- LLM API Key for any openai (gpt-4o-mini) or gemini (gemini-2.0-flash)
 ```
