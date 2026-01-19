@@ -33,14 +33,9 @@ import os
 os.environ['CURL_CA_BUNDLE'] = ''
 os.environ["PYTHONHTTPSVERIFY"] = "0"
 
-#GEMINI_API_KEY="AIzaSyAdZbo_a66I_w9jFlUbmTZwE819gVgHOuU"
-GEMINI_API_KEY="AIzaSyC6jphzvp0jDRma7OWMpLytDHJTCvYeB7M"
-os.environ['GEMINI_API_KEY'] = GEMINI_API_KEY
-
-#S2_API_KEY="AWhwVf4P6szKDRN30RNE86efdIX2CeI7I0Vvj7La"
-#S2_API_KEY="tVfIvFQFBB9RLOW5yR8uu2OlweCg7MS95aibcmhA"
-S2_API_KEY="S7a99XT1ud4VFhsLcbyTZ52ALRqkivBl7xAJ18jo"
-os.environ['S2_API_KEY'] = S2_API_KEY
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
+OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
+S2_API_KEY = os.environ.get("S2_API_KEY")
 
 model = os.environ['MODEL_NAME']
 def load_jsonl(path):
