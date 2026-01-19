@@ -21,7 +21,7 @@ if parent_dir not in sys.path:
     sys.path.insert(0, parent_dir)
 from scripts.llm_call import *
 
-sys.path.insert(0, "/home/u2738870/Documents/RebuttalGeneration/AppGit/DefendRebuttalGenerator/ai2-scholarqa-lib-main/api")
+sys.path.insert(0, "/../ai2-scholarqa-lib-main/api")
 
 from scholarqa import ScholarQA
 from scholarqa.rag.retrieval import PaperFinder, PaperFinderWithReranker
